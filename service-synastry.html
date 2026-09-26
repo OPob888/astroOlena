@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сумісність (Синастрія) — Астролог Олена Мельник</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['"Cinzel Decorative"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        astro: {
+                            bg: '#0B0A16',
+                            card: '#151328',
+                            gold: '#E5C158',
+                            goldLight: '#F3E198',
+                            purple: '#6D28D9',
+                            pink: '#D946EF'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B0A16;
+            color: #E2E8F0;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E198 0%, #E5C158 50%, #A37C20 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #E5C158 0%, #C59A30 100%);
+            color: #0B0A16;
+            transition: all 0.3s ease;
+        }
+        .gold-btn:hover {
+            box-shadow: 0 0 25px rgba(229, 193, 88, 0.45);
+            transform: translateY(-2px);
+        }
+
+        .stars-bg {
+            background-image: 
+                radial-gradient(1.5px 1.5px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #E5C158, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #D946EF, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+
+        .bg-astro-card {
+            background: linear-gradient(135deg, #1D193B 0%, #151328 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased stars-bg min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-[#0B0A16]/85 backdrop-blur-md border-b border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-amber-400/40 flex items-center justify-center text-amber-300 text-lg group-hover:border-amber-400 transition-colors">
+                    ✨
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-lg text-amber-200 tracking-wider">Олена Мельник</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400">Професійний Астролог</span>
+                </div>
+            </a>
+
+            <a href="index.html#services" class="text-xs text-amber-300 hover:text-amber-100 uppercase tracking-wider font-semibold transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Назад до всіх послуг
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="py-12 sm:py-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <!-- HERO ЗОНА ПОСЛУГИ -->
+            <div class="text-center space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs font-semibold uppercase tracking-widest">
+                    👩‍❤️‍👨 Глибокий аналіз союзу та партнерства
+                </div>
+                <h1 class="font-heading text-3xl sm:text-5xl font-bold text-white leading-tight">
+                    Астрологія Стосунків <br><span class="gold-gradient-text">(Синастрія)</span>
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+                    Зрозумійте глибинну динаміку вашої пари. Дізнайтеся точки дотику, причини непорозумінь, кармічні завдання союзу та ключі до гармонії у коханні чи бізнесі.
+                </p>
+            </div>
+
+            <!-- ШВИДКІ ФАКТИ / КАРТКИ -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="bg-astro-card border border-amber-500/20 rounded-2xl p-4 text-center">
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block mb-1">Формат</span>
+                    <span class="text-xs sm:text-sm font-semibold text-amber-200">PDF (20+ ст) + Аудіо</span>
+                </div>
+                <div class="bg-astro-card border border-amber-500/20 rounded-2xl p-4 text-center">
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block mb-1">Готовність</span>
+                    <span class="text-xs sm:text-sm font-semibold text-amber-200">3–5 днів</span>
+                </div>
+                <div class="bg-astro-card border border-amber-500/20 rounded-2xl p-4 text-center">
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block mb-1">Підтримка</span>
+                    <span class="text-xs sm:text-sm font-semibold text-amber-200">7 днів на питання</span>
+                </div>
+                <div class="bg-astro-card border border-amber-500/20 rounded-2xl p-4 text-center">
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block mb-1">Вартість</span>
+                    <span class="text-base sm:text-lg font-bold text-amber-300">2 800 ₴</span>
+                </div>
+            </div>
+
+            <!-- ДЛЯ КОГО ЦЯ КОНСУЛЬТАЦІЯ -->
+            <div class="bg-astro-card border border-amber-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6">
+                <h2 class="font-heading text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
+                    <span class="text-rose-400 text-2xl">💞</span> Коли варто зробити розбір сумісності?
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-light text-slate-300">
+                    <div class="flex items-start gap-3 bg-[#0B0A16]/60 p-4 rounded-xl border border-slate-800">
+                        <i class="fa-solid fa-heart-circle-bolt text-rose-400 mt-1"></i>
+                        <span><strong>Початок стосунків:</strong> Щоб дізнатися справжній потенціал союзу та уникнути розчарувань.</span>
+                    </div>
+                    <div class="flex items-start gap-3 bg-[#0B0A16]/60 p-4 rounded-xl border border-slate-800">
+                        <i class="fa-solid fa-[#0B0A16] fa-arrows-rotate text-rose-400 mt-1"></i>
+                        <span><strong>Повторювані конфлікти:</strong> Зрозуміти, чому ви суперечите через дрібниці та як це припинити.</span>
+                    </div>
+                    <div class="flex items-start gap-3 bg-[#0B0A16]/60 p-4 rounded-xl border border-slate-800">
+                        <i class="fa-solid fa-ring text-rose-400 mt-1"></i>
+                        <span><strong>Перед шлюбом:</strong> Оцінити готовність обидвох до створення сім'ї та побуту.</span>
+                    </div>
+                    <div class="flex items-start gap-3 bg-[#0B0A16]/60 p-4 rounded-xl border border-slate-800">
+                        <i class="fa-solid fa-handshake text-rose-400 mt-1"></i>
+                        <span><strong>Бізнес-партнерство:</strong> Перевірити надійність, фінансову чесність та розподіл ролей.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ДОКЛАДНА ПРОГРАМА РОЗБОРУ -->
+            <div class="space-y-6">
+                <div class="text-center">
+                    <h2 class="font-heading text-2xl font-bold text-white">Що входить у розбір сумісності</h2>
+                    <p class="text-xs text-slate-400 mt-1 font-light">Покрокова карта ваших взаємин без ілюзій</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6">
+                    <!-- Блок 1 -->
+                    <div class="bg-astro-card border border-amber-500/20 rounded-2xl p-6 flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-300 flex items-center justify-center text-xl shrink-0">💖</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading text-lg font-bold text-amber-200">1. Психологічна та Емоційна Сумісність</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+                                Як ви сприймаєте один одного на емоційному рівні. Порівняння потреб, мов кохання, температур та звичок у побуті.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Блок 2 -->
+                    <div class="bg-astro-card border border-amber-500/20 rounded-2xl p-6 flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-xl shrink-0">🔥</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading text-lg font-bold text-amber-200">2. Сексуальне тяжіння та Пристрасть</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+                                Рівень фізичного тяжіння, інтимні очікування кожного з партнерів та збереження пристрасті протягом тривалого часу.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Блок 3 -->
+                    <div class="bg-astro-card border border-amber-500/20 rounded-2xl p-6 flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl shrink-0">⚡</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading text-lg font-bold text-amber-200">3. Точки Конфліктів та Способи їх Попереждення</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+                                Де криються потенційні суперечки (гроші, батьки, ревнощі, кар'єра) та які інструменти допоможуть перетворити конфлікт на діалог.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Блок 4 -->
+                    <div class="bg-astro-card border border-amber-500/20 rounded-2xl p-6 flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl shrink-0">🔗</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading text-lg font-bold text-amber-200">4. Кармічний зв'язок та Призначення Союзу</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+                                Чому ви зустрілися, чому навчає вас цей союз, та чи є у вашої пари спільні кармічні завдання у цьому житті.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ПОПУЛЯРНІ ЗАПИТАННЯ (FAQ) -->
+            <div class="space-y-4">
+                <h2 class="font-heading text-xl font-bold text-white text-center mb-6">Часті запитання про Синастрію</h2>
+                
+                <div class="bg-astro-card border border-slate-800 rounded-2xl p-5 space-y-2">
+                    <h4 class="font-semibold text-amber-200 text-sm">Чи обов'язково знати точний час народження обох партнерів?</h4>
+                    <p class="text-xs text-slate-300 font-light leading-relaxed">
+                        Точний час обох партнерів дає 100% точність. Якщо час одного з партнерів невідомий, розбір проводиться з фокусом на планетні аспекти та загальну психологічну сумісність.
+                    </p>
+                </div>
+
+                <div class="bg-astro-card border border-slate-800 rounded-2xl p-5 space-y-2">
+                    <h4 class="font-semibold text-amber-200 text-sm">Чи буває "погана" сумісність, коли краще розійтися?</h4>
+                    <p class="text-xs text-slate-300 font-light leading-relaxed">
+                        Астрологія не виносить вироків. Бувають складні союзи з високим рівнем напруги, але знаючи слабкі місця, ви можете свідомо перетворити кризи на ріст.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ВЕЛИКИЙ ФІНАЛЬНИЙ БЛОК З КНОПКОЮ -->
+            <div id="order" class="bg-gradient-to-r from-purple-900/50 via-amber-950/40 to-purple-900/50 border-2 border-amber-400/50 rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-rose-400/10 rounded-full blur-2xl pointer-events-none"></div>
+                
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-300 bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/20 inline-block">
+                    Зміцніть свої стосунки
+                </span>
+
+                <h2 class="font-heading text-2xl sm:text-4xl font-bold text-white leading-tight">
+                    Готові до глибинного розуміння партнера?
+                </h2>
+                
+                <p class="text-slate-300 text-xs sm:text-sm font-light max-w-lg mx-auto leading-relaxed">
+                    Замовляйте аналіз сумісності (синастрію) та дізнайтеся секрети вашої гармонії.
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="index.html#booking" class="gold-btn w-full sm:w-auto px-10 py-4 rounded-full font-bold text-xs sm:text-sm uppercase tracking-wider text-center shadow-xl">
+                        Замовити Аналіз Сумісності (2 800 ₴)
+                    </a>
+                    <a href="https://t.me/" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full border border-amber-400/40 text-amber-200 hover:bg-amber-400/10 transition-all font-semibold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-telegram text-base"></i> Запитати в Telegram
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#07060F] border-t border-amber-500/10 py-8 text-slate-400 text-xs mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <span class="text-amber-300 text-lg">✨</span>
+                <span class="font-heading text-white font-bold">Олена Мельник</span>
+            </div>
+            <p>© 2026 Олена Мельник. Усі права захищено.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
