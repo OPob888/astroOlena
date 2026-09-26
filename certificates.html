@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарункові Сертифікати — Астролог Олена Мельник</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cinzel Decorative & Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['"Cinzel Decorative"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        astro: {
+                            bg: '#0B0A16',
+                            card: '#151328',
+                            gold: '#E5C158',
+                            goldLight: '#F3E198',
+                            purple: '#6D28D9',
+                            pink: '#D946EF'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B0A16;
+            color: #E2E8F0;
+        }
+
+        /* Текстовий золотий градієнт */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E198 0%, #E5C158 50%, #A37C20 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Кнопка з золотим градієнтом */
+        .gold-btn {
+            background: linear-gradient(135deg, #E5C158 0%, #C59A30 100%);
+            color: #0B0A16;
+            transition: all 0.3s ease;
+        }
+        .gold-btn:hover {
+            box-shadow: 0 0 25px rgba(229, 193, 88, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Фоновий ефект зірок */
+        .stars-bg {
+            background-image: 
+                radial-gradient(1.5px 1.5px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #E5C158, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #D946EF, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+
+        /* Стилізація картки сертифіката */
+        .certificate-card {
+            background: linear-gradient(135deg, #1D193B 0%, #151328 100%);
+            border: 1px solid rgba(229, 193, 88, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased stars-bg flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-[#0B0A16]/80 backdrop-blur-md border-b border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-amber-400/40 flex items-center justify-center text-amber-300 text-lg group-hover:border-amber-400 transition-colors">
+                    ✨
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-lg text-amber-200 tracking-wider">Олена Мельник</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400">Професійний Астролог</span>
+                </div>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.html#about" class="hover:text-amber-300 transition-colors">Про мене</a>
+                <a href="index.html#services" class="hover:text-amber-300 transition-colors">Астропослуги</a>
+                <a href="index.html#quiz" class="hover:text-amber-300 transition-colors">Підбір послуги</a>
+                <a href="index.html#examples" class="hover:text-amber-300 transition-colors">Приклади</a>
+                <a href="index.html#faq" class="hover:text-amber-300 transition-colors">FAQ</a>
+                <a href="certificates.html" class="text-amber-300 font-semibold border-b border-amber-400/50 pb-0.5">🎁 Сертифікати</a>
+            </nav>
+
+            <a href="index.html" class="text-xs text-amber-200 hover:text-white uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left text-[10px]"></i> На головну
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-12 pb-16 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400 bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/20 inline-block">
+                Особливий подарунок
+            </span>
+            <h1 class="font-heading text-3xl sm:text-5xl font-bold text-white leading-tight">
+                Подарункові <span class="gold-gradient-text">Астро-Сертифікати</span>
+            </h1>
+            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-light leading-relaxed">
+                Подаруйте найцінніше — інсайт, самопізнання та відповіді на важливі життєві запитання. Сертифікат на астрологічну консультацію стане неповторним сюрпризом для коханих, друзів чи колег.
+            </p>
+        </div>
+    </section>
+
+    <!-- МАКЕТИ СЕРТИФІКАТІВ (ВІЗУАЛІЗАЦІЯ) -->
+    <section class="py-10 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Електронний сертифікат -->
+                <div class="certificate-card rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-2xl">📱</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-300 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
+                                МИТТЄВА ДОСТАВКА
+                            </span>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-white">Електронний Сертифікат</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed font-light">
+                            Ідеально, якщо подарунок потрібен «вже зараз». Готовий PDF-сертифікат із персональним кодом та гарним оформленням надсилається вам у Telegram або на E-mail.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-400 pt-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Готово за 15 хвилин</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Зручно надіслати месенджером</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Персональне привітання від вас</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800">
+                        <a href="#order" onclick="selectCertType('Електронний')" class="gold-btn w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider block text-center">
+                            Замовити Електронний
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Друкований сертифікат -->
+                <div class="certificate-card rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-2xl">💌</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-300 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
+                                ПРЕМІУМ УПАКОВКА
+                            </span>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-white">Друкований у Конверті</h3>
+                        <p class="text-slate-300 text-xs leading-relaxed font-light">
+                            Вишуканий фізичний сертифікат на дизайнерському папері з золотим тисненням, запечатаний у дизайнерський конверт із сургучевою печаткою.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-400 pt-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Преміальна золота естетика</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Доставка Новою Поштою по Україні</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Готове вишукане пакування</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800">
+                        <a href="#order" onclick="selectCertType('Друкований')" class="gold-btn w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider block text-center">
+                            Замовити Друкований
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ФОРМА ЗАМОВЛЕННЯ СЕРТИФІКАТА -->
+    <section id="order" class="py-16 relative">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-astro-card border border-amber-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl relative">
+                
+                <div class="text-center space-y-2 mb-8">
+                    <span class="text-2xl">🎁</span>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white">Оформлення Сертифіката</h2>
+                    <p class="text-slate-400 text-xs">Заповніть дані, і я підготую сертифікат у найкоротший термін.</p>
+                </div>
+
+                <form onsubmit="handleCertSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Ваше Ім'я (Дарувальник)</label>
+                        <input type="text" required placeholder="Марія" class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Телефон / Telegram</label>
+                            <input type="text" required placeholder="+380 (97) 000-00-00" class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Формат сертифіката</label>
+                            <select id="cert-type-select" class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                                <option value="Електронний">📱 Електронний (PDF)</option>
+                                <option value="Друкований">💌 Друкований (у конверті)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Послуга чи Сума</label>
+                            <select class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                                <option>Натальна карта (2 500 ₴)</option>
+                                <option>Соляр / Прогноз на рік (3 000 ₴)</option>
+                                <option>Синастрія / Сумісність (2 800 ₴)</option>
+                                <option>Фінансовий Гороскоп (2 200 ₴)</option>
+                                <option>Сертифікат на довільну суму</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Ім'я того, кому даруєте</label>
+                            <input type="text" placeholder="Наприклад: Олена" class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Текст вітання (за бажанням)</label>
+                        <textarea rows="3" placeholder="Напишіть теплі слова, які ми нанесемо на сертифікат..." class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="gold-btn w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider shadow-lg mt-4">
+                        Оформити замовлення
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#070611] border-t border-slate-800 py-12 text-slate-500 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center gap-3">
+                <span class="font-heading font-bold text-amber-200 text-sm">Олена Мельник</span>
+                <span>© 2026 Всі права захищені.</span>
+            </div>
+
+            <!-- Соцмережі -->
+            <div class="flex items-center gap-4 text-base">
+                <a href="#" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-amber-300 hover:bg-amber-400 hover:text-slate-900 transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-amber-300 hover:bg-amber-400 hover:text-slate-900 transition-colors">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-amber-300 hover:bg-amber-400 hover:text-slate-900 transition-colors">
+                    <i class="fa-brands fa-viber"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        function selectCertType(type) {
+            const select = document.getElementById('cert-type-select');
+            if (type === 'Електронний') {
+                select.value = 'Електронний';
+            } else {
+                select.value = 'Друкований';
+            }
+        }
+
+        function handleCertSubmit(event) {
+            event.preventDefault();
+            alert("Дякуємо за замовлення сертифіката! Олена Мельник зв'яжеться з вами найближчим часом для узгодження деталей.");
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Астролог Олена Мельник — Персональні Астроконсультації</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cinzel Decorative & Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['"Cinzel Decorative"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        astro: {
+                            bg: '#0B0A16',
+                            card: '#151328',
+                            gold: '#E5C158',
+                            goldLight: '#F3E198',
+                            purple: '#6D28D9',
+                            pink: '#D946EF'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B0A16;
+            color: #E2E8F0;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E198 0%, #E5C158 50%, #A37C20 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #E5C158 0%, #C59A30 100%);
+            color: #0B0A16;
+            transition: all 0.3s ease;
+        }
+        .gold-btn:hover {
+            box-shadow: 0 0 25px rgba(229, 193, 88, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .stars-bg {
+            background-image: 
+                radial-gradient(1.5px 1.5px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #E5C158, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #D946EF, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+
+        .bg-astro-card {
+            background: linear-gradient(135deg, #1D193B 0%, #151328 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased stars-bg">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-[#0B0A16]/85 backdrop-blur-md border-b border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-amber-400/40 flex items-center justify-center text-amber-300 text-lg group-hover:border-amber-400 transition-colors">
+                    ✨
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-lg text-amber-200 tracking-wider">Олена Мельник</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400">Професійний Астролог</span>
+                </div>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-amber-300 transition-colors">Про мене</a>
+                <a href="#ethics" class="hover:text-amber-300 transition-colors">Принципи</a>
+                <a href="#services" class="hover:text-amber-300 transition-colors">Послуги</a>
+                <a href="how-it-works.html" class="hover:text-amber-300 transition-colors">Як я працюю</a>
+                <a href="#quiz" class="hover:text-amber-300 transition-colors">Підбір послуги</a>
+                <a href="certificates.html" class="hover:text-amber-300 transition-colors text-amber-200">🎁 Сертифікати</a>
+            </nav>
+
+            <a href="#booking" class="gold-btn px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider hidden sm:inline-block">
+                Записатися
+            </a>
+        </div>
+    </header>
+
+     <section id="about" class="relative pt-12 pb-20 md:py-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Ліва колонка: Текст -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-medium uppercase tracking-widest">
+                        <i class="fa-solid fa-star text-[10px]"></i> Твій персональний путівник у зорях
+                    </div>
+
+                    <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        Відкрийте таємниці вашої <span class="gold-gradient-text">Натальної Карти</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                        Вітаю! Я — <strong class="text-amber-200 font-semibold">Олена Мельник</strong>, практикуючий астролог із 8-річним досвідом. Допомагаю знайти своє призначення, розкрити фінансовий потенціал та побудувати гармонійні стосунки за допомогою мови планет.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#services" class="gold-btn w-full sm:w-auto px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider text-center shadow-lg">
+                            Обрати консультацію
+                        </a>
+                        <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-full border border-amber-400/30 text-amber-200 hover:bg-amber-400/10 transition-all font-semibold text-sm uppercase tracking-wider text-center">
+                            Задати питання
+                        </a>
+                    </div>
+
+                    <!-- Статистика -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-800 text-center lg:text-left">
+                        <div>
+                            <span class="font-heading text-2xl sm:text-3xl font-bold text-amber-300 block">8+</span>
+                            <span class="text-xs text-slate-400 uppercase tracking-wider">Років практики</span>
+                        </div>
+                        <div>
+                            <span class="font-heading text-2xl sm:text-3xl font-bold text-amber-300 block">1500+</span>
+                            <span class="text-xs text-slate-400 uppercase tracking-wider">Разбора карток</span>
+                        </div>
+                        <div>
+                            <span class="font-heading text-2xl sm:text-3xl font-bold text-amber-300 block">98%</span>
+                            <span class="text-xs text-slate-400 uppercase tracking-wider">Задоволених клієнтів</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Права колонка: Фото Олени з астро-рамкою -->
+                <div class="lg:col-span-5 flex justify-center items-center relative">
+                    
+                    <!-- Сяйво за фото -->
+                    <div class="absolute w-72 h-72 sm:w-96 sm:h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
+
+                    <!-- Обертальне зодіакальне коло (Декорація) -->
+                    <div class="absolute w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] border border-amber-500/20 rounded-full animate-spin-slow pointer-events-none flex items-center justify-center">
+                        <div class="absolute inset-0 border border-dashed border-amber-400/15 rounded-full"></div>
+                        <span class="absolute top-0 text-amber-400/60 text-xs">♈</span>
+                        <span class="absolute right-0 text-amber-400/60 text-xs">♋</span>
+                        <span class="absolute bottom-0 text-amber-400/60 text-xs">♎</span>
+                        <span class="absolute left-0 text-amber-400/60 text-xs">♑</span>
+                    </div>
+
+                    <!-- Головний рамковий контейнер для Фото -->
+                    <div class="relative w-72 h-72 sm:w-88 sm:h-88 rounded-full p-2 bg-gradient-to-tr from-amber-500/40 via-purple-500/20 to-amber-200/40 shadow-2xl">
+                        <div class="w-full h-full rounded-full overflow-hidden border-2 border-amber-300/60 relative bg-astro-card">
+                            
+                            <!-- ВСТАВТЕ СЮДИ ФОТО ОЛЕНИ -->
+                            <!-- Замініть src на файл фото Олени, наприклад: src="./img/olena.jpg" -->
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" alt="Астролог Олена Мельник" class="w-full h-full object-cover object-center filter contrast-[1.05]">
+                            
+                        </div>
+
+                        <!-- Маленька плашка поверх фото -->
+                        <div class="absolute -bottom-2 right-4 bg-astro-card/90 border border-amber-400/40 backdrop-blur-md px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2">
+                            <span class="text-amber-400 text-sm">✨</span>
+                            <span class="text-xs font-semibold text-amber-100">Олена Мельник</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. БЛОК: З ЧИМ Я ПРАЦЮЮ ТА НЕ ПРАЦЮЮ + КОРИСНІ ПОСИЛАННЯ -->
+    <section id="ethics" class="py-20 relative bg-[#0E0C1E]/50 border-t border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Професійні принципи</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-2">З чим я працюю / З чим НЕ працюю</h2>
+                <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <!-- 2 Колонки: Так / Ні -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- З чим працюю -->
+                <div class="bg-astro-card border border-emerald-500/30 rounded-3xl p-8 relative overflow-hidden shadow-xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold">✓</div>
+                        <h3 class="font-heading text-xl font-bold text-white">З чим я працюю:</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300 text-sm font-light">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                            <span>Пошук призначення, сильних сторін та прихованих талантів.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                            <span>Розбір фінансових блоків та вибір напрямків для зростання доходу.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                            <span>Аналіз сумісності в парі та подолання криз у стосунках.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                            <span>Прогнозування сприятливих періодів для важливих рішень (переїзд, шлюб, бізнес).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- З чим НЕ працюю -->
+                <div class="bg-astro-card border border-rose-500/30 rounded-3xl p-8 relative overflow-hidden shadow-xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-xl font-bold">✕</div>
+                        <h3 class="font-heading text-xl font-bold text-white">З чим я НЕ працюю:</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300 text-sm font-light">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <span>Медична астрологія (встановлення діагнозів та призначення лікування).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <span>Пошук зниклих речей, людей або тварин.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <span>Магічні ритуали, привороти, зняття «порчі» чи залякування.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <span>Перекладання відповідальності (рішення за вас приймаєте тільки ви).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Додаткові 2 блоки-дії під етикою (Як працюю + Не знаю час народження) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Блок 1: Перехід на сторінку "Як я працюю" -->
+                <a href="how-it-works.html" class="group bg-astro-card border border-amber-500/30 hover:border-amber-400 rounded-2xl p-6 transition-all duration-300 flex items-center justify-between shadow-lg">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-400/10 text-amber-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            📜
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-200 transition-colors">Як я працюю</h4>
+                            <p class="text-xs text-slate-400 font-light mt-0.5">Приклади готових розборів та Часті запитання</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-amber-400 group-hover:translate-x-1 transition-transform ml-2"></i>
+                </a>
+
+                <!-- Блок 2: Кнопка "Не знаю час народження" (відкриває модальне вікно) -->
+                <button onclick="openTimeModal()" class="text-left group bg-astro-card border border-amber-500/30 hover:border-amber-400 rounded-2xl p-6 transition-all duration-300 flex items-center justify-between shadow-lg">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                            🕒
+                        </div>
+                        <div>
+                            <h4 class="font-heading text-base font-bold text-white group-hover:text-amber-200 transition-colors">Не знаю час народження?</h4>
+                            <p class="text-xs text-slate-400 font-light mt-0.5">Що робити, якщо точна година невідома</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-circle-question text-amber-400 group-hover:rotate-12 transition-transform ml-2"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2. БЛОК: ЯК Я МОЖУ ВАМ ДОПОМОГТИ (ПОСЛУГИ) -->
+    <section id="services" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Індивідуальні консультації</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-2">Як я можу вам допомогти</h2>
+                <p class="text-slate-400 text-xs sm:text-sm mt-3 font-light">Оберіть напрямок, який турбує вас найбільше на цьому етапі життя</p>
+                <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mt-4"></div>
+            </div>
+
+            <!-- СНІПЕТИ ПОСЛУГ (ГРІД) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Послуга 1: Натальна Карта -->
+                <div class="bg-astro-card border border-amber-500/20 hover:border-amber-400/60 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-300 text-2xl">
+                            🔮
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white">Натальна Карта</h3>
+                        <p class="text-slate-300 text-xs font-light leading-relaxed">
+                            Глибинний аналіз вашої особистості, сильних сторін, прихованих талантів та життєвого призначення. Ваш персональний фундамент.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-amber-300 font-bold text-lg">2 500 ₴</span>
+                        <a href="service-natal.html" class="text-xs font-bold text-amber-400 hover:text-amber-200 uppercase tracking-wider flex items-center gap-1 transition-colors">
+                            Детальніше <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Послуга 2: Соляр / Прогноз -->
+                <div class="bg-astro-card border border-amber-500/20 hover:border-amber-400/60 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-300 text-2xl">
+                            ☀️
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white">Соляр (Прогноз на рік)</h3>
+                        <p class="text-slate-300 text-xs font-light leading-relaxed">
+                            Персональний астрологічний план від Дня народження до наступного Дня народження. Головні події, ризики та можливості року.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-amber-300 font-bold text-lg">3 000 ₴</span>
+                        <a href="service-solar.html" class="text-xs font-bold text-amber-400 hover:text-amber-200 uppercase tracking-wider flex items-center gap-1 transition-colors">
+                            Детальніше <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Послуга 3: Синастрія -->
+                <div class="bg-astro-card border border-amber-500/20 hover:border-amber-400/60 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-300 text-2xl">
+                            💞
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white">Синастрія (Сумісність)</h3>
+                        <p class="text-slate-300 text-xs font-light leading-relaxed">
+                            Розбір взаємин із партнером. Точки дотику, причини конфліктів, кармічні завдання пари та рекомендації для гармонії.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-amber-300 font-bold text-lg">2 800 ₴</span>
+                        <a href="service-synastry.html" class="text-xs font-bold text-amber-400 hover:text-amber-200 uppercase tracking-wider flex items-center gap-1 transition-colors">
+                            Детальніше <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Послуга 4: Фінансовий Гороскоп -->
+                <div class="bg-astro-card border border-amber-500/20 hover:border-amber-400/60 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-300 text-2xl">
+                            📈
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white">Фінанси та Кар'єра</h3>
+                        <p class="text-slate-300 text-xs font-light leading-relaxed">
+                            Визначення сфер для найбільшого фінансового зростання, розблок дохідного потенціалу та вибір професійного нішування.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-amber-300 font-bold text-lg">2 200 ₴</span>
+                        <a href="service-finance.html" class="text-xs font-bold text-amber-400 hover:text-amber-200 uppercase tracking-wider flex items-center gap-1 transition-colors">
+                            Детальніше <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Послуга 5: Дитячий Гороскоп -->
+                <div class="bg-astro-card border border-amber-500/20 hover:border-amber-400/60 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-300 text-2xl">
+                            👶
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white">Дитячий Гороскоп</h3>
+                        <p class="text-slate-300 text-xs font-light leading-relaxed">
+                            Підказки для батьків: як розкрити здібності дитини, які гуртки обрати, як правильно спілкуватися без тиску.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-amber-300 font-bold text-lg">2 000 ₴</span>
+                        <a href="service-child.html" class="text-xs font-bold text-amber-400 hover:text-amber-200 uppercase tracking-wider flex items-center gap-1 transition-colors">
+                            Детальніше <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Послуга 6: Експрес-Консультація -->
+                <div class="bg-astro-card border border-amber-500/20 hover:border-amber-400/60 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-300 text-2xl">
+                            ⚡
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white">Експрес-Запитання</h3>
+                        <p class="text-slate-300 text-xs font-light leading-relaxed">
+                            Конкретна відповідь на одне точкове питання (вибір дати, сумніви щодо пропозиції, термінова ситуація).
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-amber-300 font-bold text-lg">1 200 ₴</span>
+                        <a href="service-express.html" class="text-xs font-bold text-amber-400 hover:text-amber-200 uppercase tracking-wider flex items-center gap-1 transition-colors">
+                            Детальніше <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 3. БЛОК: ШВИДКИЙ ДИНАМІЧНИЙ КВІЗ-ТЕСТ -->
+<section id="quiz" class="py-20 bg-[#0E0C1E] border-y border-amber-500/10">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Інтерактивний помічник</span>
+            <h2 class="font-heading text-3xl font-bold text-white mt-2">Підберіть ідеальну консультацію</h2>
+            <p class="text-slate-400 text-xs mt-2">Дайте відповідь на 3 прості запитання</p>
+        </div>
+
+        <div class="bg-astro-card border border-amber-500/20 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+            
+            <!-- КРОК 1 -->
+            <div id="quiz-step-1" class="space-y-6">
+                <div class="flex justify-between items-center text-xs text-amber-400 font-semibold">
+                    <span>Крок 1 з 3</span>
+                    <span>33%</span>
+                </div>
+                <h3 class="text-lg font-semibold text-white">Яка сфера турбує вас найбільше просто зараз?</h3>
+                <div class="grid grid-cols-1 gap-3">
+                    <button onclick="quizNext(2, 'Особистий розвиток / призначення')" class="text-left px-5 py-4 rounded-xl bg-[#0B0A16] border border-slate-700 hover:border-amber-400 transition-colors text-sm text-slate-200">
+                        ✨ Не розумію, куди рухатися далі, шукаю призначення
+                    </button>
+                    <button onclick="quizNext(2, 'Стосунки')" class="text-left px-5 py-4 rounded-xl bg-[#0B0A16] border border-slate-700 hover:border-amber-400 transition-colors text-sm text-slate-200">
+                        💞 Складність у стосунках із партнером / пошук кохання
+                    </button>
+                    <button onclick="quizNext(2, 'Фінанси / Планування')" class="text-left px-5 py-4 rounded-xl bg-[#0B0A16] border border-slate-700 hover:border-amber-400 transition-colors text-sm text-slate-200">
+                        📈 Гроші, кар'єра або плани на майбутній рік
+                    </button>
+                </div>
+            </div>
+
+            <!-- КРОК 2 -->
+            <div id="quiz-step-2" class="space-y-6 hidden">
+                <div class="flex justify-between items-center text-xs text-amber-400 font-semibold">
+                    <span>Крок 2 з 3</span>
+                    <span>66%</span>
+                </div>
+                <h3 class="text-lg font-semibold text-white">Чи плануєте ви важливу подію найближчим часом?</h3>
+                <div class="grid grid-cols-1 gap-3">
+                    <button onclick="quizNext(3, 'День народження')" class="text-left px-5 py-4 rounded-xl bg-[#0B0A16] border border-slate-700 hover:border-amber-400 transition-colors text-sm text-slate-200">
+                        🎂 Скоро День народження (хочу дізнатися прогноз на рік)
+                    </button>
+                    <button onclick="quizNext(3, 'Швидке рішення')" class="text-left px-5 py-4 rounded-xl bg-[#0B0A16] border border-slate-700 hover:border-amber-400 transition-colors text-sm text-slate-200">
+                        ⚡ Термінове конкретне питання (потрібна відповідь «тут і зараз»)
+                    </button>
+                    <button onclick="quizNext(3, 'Загальний аналіз')" class="text-left px-5 py-4 rounded-xl bg-[#0B0A16] border border-slate-700 hover:border-amber-400 transition-colors text-sm text-slate-200">
+                        🔍 Немає конкретної дати, просто хочу розібратися в собі
+                    </button>
+                </div>
+            </div>
+
+            <!-- КРОК 3 -->
+            <div id="quiz-step-3" class="space-y-6 hidden">
+                <div class="flex justify-between items-center text-xs text-amber-400 font-semibold">
+                    <span>Крок 3 з 3</span>
+                    <span>100%</span>
+                </div>
+                <h3 class="text-lg font-semibold text-white">Для кого ви обираєте розбір?</h3>
+                <div class="grid grid-cols-1 gap-3">
+                    <button onclick="showQuizResult('Натальна карта або Соляр')" class="text-left px-5 py-4 rounded-xl bg-[#0B0A16] border border-slate-700 hover:border-amber-400 transition-colors text-sm text-slate-200">
+                        👤 Для себе
+                    </button>
+                    <button onclick="showQuizResult('Синастрія (Сумісність)')" class="text-left px-5 py-4 rounded-xl bg-[#0B0A16] border border-slate-700 hover:border-amber-400 transition-colors text-sm text-slate-200">
+                        👩‍❤️‍👨 Для себе та моєї другої половинки
+                    </button>
+                    <button onclick="showQuizResult('Дитячий Гороскоп')" class="text-left px-5 py-4 rounded-xl bg-[#0B0A16] border border-slate-700 hover:border-amber-400 transition-colors text-sm text-slate-200">
+                        👶 Для своєї дитини
+                    </button>
+                </div>
+            </div>
+
+            <!-- РЕЗУЛЬТАТ -->
+            <div id="quiz-result" class="text-center space-y-6 hidden py-4">
+                <span class="text-4xl">🔮</span>
+                <h3 class="font-heading text-2xl text-amber-200 font-bold">Рекомендована послуга:</h3>
+                <div id="quiz-recommendation-title" class="text-xl font-bold text-white bg-amber-500/10 border border-amber-400/30 py-3 px-6 rounded-2xl inline-block">
+                    Натальна Карта
+                </div>
+                <p class="text-slate-300 text-sm max-w-md mx-auto font-light">
+                    Вам найкраще підійде глибинний аналіз вашого гороскопу для розкриття потенціалу та відповідей на ваші запитання.
+                </p>
+                <div>
+                    <a href="#booking" class="gold-btn px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider inline-block">
+                        Записатися на цю послугу
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- 4. БЛОК: ПОДАРУНКОВІ СЕРТИФІКАТИ -->
+    <section class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-purple-900/40 via-amber-950/30 to-purple-900/40 border border-amber-400/40 rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+                <div class="space-y-4 text-center md:text-left max-w-2xl">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-300 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20 inline-block">
+                        🎁 Подарунок близьким
+                    </span>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white">Подаруйте астроконсультацію</h2>
+                    <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+                        Електронний або друкований подарунковий сертифікат на будь-яку консультацію. Оформлюється за 5 хвилин із персональним привітанням.
+                    </p>
+                </div>
+                <a href="certificates.html" class="gold-btn px-8 py-4 rounded-full font-bold text-xs uppercase tracking-wider whitespace-nowrap shadow-lg">
+                    Дізнатися детальніше
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. БЛОК: ФОРМА ЗАПИСУ -->
+    <section id="booking" class="py-20 relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-astro-card border border-amber-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Запис на консультацію</span>
+                    <h2 class="font-heading text-3xl font-bold text-white mt-2">Залиште заявку</h2>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-2">Я зв'яжуся з вами найближчим часом для уточнення деталей</p>
+                </div>
+
+                <form class="space-y-5">
+                    <div>
+                        <label class="block text-xs uppercase font-medium text-slate-300 mb-2">Ваше ім'я</label>
+                        <input type="text" placeholder="Як до вас звертатися?" class="w-full bg-[#0B0A16] border border-amber-500/20 focus:border-amber-400 rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs uppercase font-medium text-slate-300 mb-2">Телефон / Telegram</label>
+                            <input type="text" placeholder="+380..." class="w-full bg-[#0B0A16] border border-amber-500/20 focus:border-amber-400 rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase font-medium text-slate-300 mb-2">Обрана послуга</label>
+                            <select class="w-full bg-[#0B0A16] border border-amber-500/20 focus:border-amber-400 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none transition-colors">
+                                <option>Натальна Карта</option>
+                                <option>Соляр (Прогноз на рік)</option>
+                                <option>Синастрія (Сумісність)</option>
+                                <option>Фінанси та Кар'єра</option>
+                                <option>Дитячий Гороскоп</option>
+                                <option>Експрес-Запитання</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase font-medium text-slate-300 mb-2">Ваші дані народження (місто, дата, час якщо відомо)</label>
+                        <textarea rows="3" placeholder="Наприклад: Київ, 15.08.1995, 14:30" class="w-full bg-[#0B0A16] border border-amber-500/20 focus:border-amber-400 rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors"></textarea>
+                    </div>
+
+                    <button type="submit" class="gold-btn w-full py-4 rounded-xl font-bold text-xs uppercase tracking-wider mt-4">
+                        Надіслати заявку
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#07060F] border-t border-amber-500/10 py-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="text-amber-300 text-lg">✨</span>
+                <span class="font-heading text-white font-bold">Олена Мельник</span>
+            </div>
+
+            <p>© 2026 Олена Мельник. Усі права захищено.</p>
+
+            <div class="flex items-center gap-4 text-base text-amber-300">
+                <a href="#" class="hover:text-amber-100 transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="hover:text-amber-100 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-amber-100 transition-colors"><i class="fa-brands fa-viber"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP MODAL: НЕ ЗНАЮ ЧАС НАРОДЖЕННЯ -->
+    <div id="timeModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-astro-card border border-amber-500/40 rounded-3xl p-6 sm:p-8 max-w-lg w-full relative shadow-2xl">
+            <button onclick="closeTimeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-xl">🕒</div>
+                <h3 class="font-heading text-lg font-bold text-white">Не знаєте час народження?</h3>
+            </div>
+
+            <div class="space-y-3 text-slate-300 text-xs font-light leading-relaxed">
+                <p>Це поширена ситуація, і з нею можна працювати!</p>
+                <p><strong class="text-amber-200 font-normal">1. Подивіться бирку з пологового або запитайте батьків:</strong> навіть приближній проміжок (наприклад, «вранці між 8 та 10») дуже допомагає.</p>
+                <p><strong class="text-amber-200 font-normal">2. Процедура Ректифікації:</strong> відновлення точного часу за ключовими подіями вашого життя (переїзди, шлюб, важливі події).</p>
+                <p><strong class="text-amber-200 font-normal">3. Космограма:</strong> якщо час невідомий взагалі, розбір будується без астрологічних будинків, але дає до 70% інформації про ваш характер та психотип.</p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800 flex flex-col sm:flex-row gap-3">
+                <a href="https://t.me/" target="_blank" class="gold-btn py-3 px-4 rounded-xl text-center font-bold text-xs uppercase tracking-wider flex-1">
+                    Написати в Telegram
+                </a>
+                <button onclick="closeTimeModal()" class="py-3 px-4 rounded-xl border border-slate-700 text-slate-300 text-xs uppercase tracking-wider flex-1">
+                    Зрозуміло
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MODAL -->
+    <script>
+        function openTimeModal() {
+            document.getElementById('timeModal').classList.remove('hidden');
+        }
+
+        function closeTimeModal() {
+            document.getElementById('timeModal').classList.add('hidden');
+        }
+
+        // Закриття модалки при кліку поза нею
+        window.onclick = function(event) {
+            const modal = document.getElementById('timeModal');
+            if (event.target === modal) {
+                closeTimeModal();
+            }
+        }
+        // Скрипт для Квізу
+    function quizNext(step, choice) {
+        document.getElementById(`quiz-step-${step - 1}`).classList.add('hidden');
+        document.getElementById(`quiz-step-${step}`).classList.remove('hidden');
+    }
+
+    function showQuizResult(recommendation) {
+        document.getElementById('quiz-step-3').classList.add('hidden');
+        document.getElementById('quiz-result').classList.remove('hidden');
+        document.getElementById('quiz-recommendation-title').innerText = recommendation;
+    }
+    </script>
+</body>
+</html>

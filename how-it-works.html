@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Як я працюю — Олена Мельник | Астролог</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'astro-dark': '#0B0A16',
+                        'astro-card': '#131127',
+                    },
+                    fontFamily: {
+                        heading: ['Cormorant Garamond', 'serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B0A16;
+            color: #E2E8F0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-heading {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .gold-btn {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+        }
+        .gold-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.5);
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-astro-dark text-slate-200 antialiased selection:bg-amber-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- ФОНОВІ ЕФЕКТИ СЯЙВА -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-900/20 blur-[120px] pointer-events-none rounded-full"></div>
+    <div class="absolute top-96 right-0 w-[500px] h-[500px] bg-amber-600/10 blur-[150px] pointer-events-none rounded-full"></div>
+
+    <!-- HEADER / НАВІГАЦІЯ -->
+    <header class="sticky top-0 z-40 bg-[#0B0A16]/90 backdrop-blur-md border-b border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <span class="text-amber-300 text-2xl">✨</span>
+                <span class="font-heading text-xl sm:text-2xl text-white font-bold tracking-wide">Олена Мельник</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-wider text-slate-300">
+                <a href="index.html" class="hover:text-amber-300 transition-colors">Головна</a>
+                <a href="index.html#services" class="hover:text-amber-300 transition-colors">Послуги</a>
+                <a href="how-it-works.html" class="text-amber-300 font-semibold border-b border-amber-400 pb-1">Як я працюю</a>
+                <a href="certificates.html" class="hover:text-amber-300 transition-colors">Сертифікати</a>
+                <a href="index.html#booking" class="gold-btn px-6 py-2.5 rounded-full font-bold">Записатися</a>
+            </nav>
+
+            <a href="index.html#booking" class="md:hidden gold-btn px-4 py-2 rounded-full font-bold text-xs uppercase tracking-wider">
+                Запис
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO ЗАГОЛОВОК СТОРІНКИ -->
+    <section class="pt-16 pb-12 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-400 bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/20 inline-block mb-4">
+                Прозорість та комфорт
+            </span>
+            <h1 class="font-heading text-3xl sm:text-5xl font-bold text-white max-w-4xl mx-auto leading-tight">
+                Як проходить консультація: від вашої заявки до готового розбору та часті запитання
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mt-4 font-light">
+                Детальний путівник по всіх етапах нашої співпраці, термінах підготовки, форматах проведення та відповідях на популярні питання.
+            </p>
+        </div>
+    </section>
+
+    <!-- ОСНОВНИЙ БЛОК: ЕТАПИ ТА ПРИКЛАДИ -->
+    <section class="pb-16 relative z-10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+            <!-- ЕТАПИ РОБОТИ -->
+            <div class="bg-astro-card border border-amber-500/20 rounded-3xl p-6 sm:p-10 shadow-2xl gold-border-glow">
+                <div class="mb-8 border-b border-amber-500/10 pb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Процес</span>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1 flex items-center gap-3">
+                        <span>📜</span> Етапи замовлення та підготовки
+                    </h2>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Крок 1 -->
+                    <div class="flex gap-4 sm:gap-6 items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-amber-300 flex items-center justify-center font-bold text-lg shrink-0">
+                            01
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-base sm:text-xl font-bold text-white">Оформлення заявки та первинний контакт</h3>
+                            <p class="text-slate-300 text-sm font-light leading-relaxed">
+                                Ви залишаєте заявку на сайті або пишете мені в Telegram/Instagram. Я уточнюю вашу дату, точний час та місто народження, а також ключові запитання (кар'єра, стосунки, особистий розвиток).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Крок 2 -->
+                    <div class="flex gap-4 sm:gap-6 items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-amber-300 flex items-center justify-center font-bold text-lg shrink-0">
+                            02
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-base sm:text-xl font-bold text-white">Уточнення даних та ректифікація</h3>
+                            <p class="text-slate-300 text-sm font-light leading-relaxed">
+                                Якщо ви знаєте час народження з точністю до хвилини — ми одразу фіксуємо дату. Якщо час невідомий або приблизний, я ставлю уточнувальні запитання щодо важливих подій життя для звірки карти.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Крок 3 -->
+                    <div class="flex gap-4 sm:gap-6 items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-amber-300 flex items-center justify-center font-bold text-lg shrink-0">
+                            03
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-base sm:text-xl font-bold text-white">Глибинна аналітика та підготовка</h3>
+                            <p class="text-slate-300 text-sm font-light leading-relaxed">
+                                Я вручну будую та аналізую вашу натальну карту, пропрацьовую транзити, соляри чи сумісність. Підготовка займає <strong>від 3 до 7 робочих днів</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Крок 4 -->
+                    <div class="flex gap-4 sm:gap-6 items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-amber-300 flex items-center justify-center font-bold text-lg shrink-0">
+                            04
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-base sm:text-xl font-bold text-white">Проведення консультації та матеріали</h3>
+                            <p class="text-slate-300 text-sm font-light leading-relaxed">
+                                Консультація проходить у формі <strong>онлайн-зустрічі (Zoom / Google Meet)</strong> на 60–90 хв або як <strong>детальний PDF-файл з аудіо-поясненнями</strong>. Запис Zoom залишається у вас назавжди.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Крок 5 -->
+                    <div class="flex gap-4 sm:gap-6 items-start">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-amber-300 flex items-center justify-center font-bold text-lg shrink-0">
+                            05
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-base sm:text-xl font-bold text-white">Післяконсультаційний супровід</h3>
+                            <p class="text-slate-300 text-sm font-light leading-relaxed">
+                                Протягом 7 днів після консультації ви можете поставити мені будь-які уточнюючі запитання щодо нашої розмови в чаті.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ПРИКЛАДИ РОБІТ ТА ВІДЕО -->
+            <div class="bg-astro-card border border-amber-500/20 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8">
+                <div class="border-b border-amber-500/10 pb-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Портфоліо</span>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Приклади матеріалів та консультацій</h2>
+                </div>
+
+                <!-- Фото матеріалів -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-[#07060F] border border-amber-500/20 rounded-2xl p-6 text-center space-y-3">
+                        <span class="text-4xl block">📊</span>
+                        <h4 class="text-sm font-bold text-amber-300 uppercase tracking-wider">PDF-звіти та розбори</h4>
+                        <p class="text-xs text-slate-400 font-light">Структурований текстовий файл на 20+ сторінок із графіками та розшифровкою</p>
+                    </div>
+
+                    <div class="bg-[#07060F] border border-amber-500/20 rounded-2xl p-6 text-center space-y-3">
+                        <span class="text-4xl block">🗺️</span>
+                        <h4 class="text-sm font-bold text-amber-300 uppercase tracking-wider">Астрологічні карти</h4>
+                        <p class="text-xs text-slate-400 font-light">Наочні схеми розташування планет та індивідуальних життєвих періодів</p>
+                    </div>
+                </div>
+
+                <!-- Відео приклад -->
+                <div class="space-y-3 pt-2">
+                    <h3 class="text-base font-bold text-white flex items-center gap-2">
+                        <span class="text-amber-400">🎬</span> Фрагмент онлайн-консультації
+                    </h3>
+                    <div class="aspect-video w-full bg-[#07060F] border border-amber-500/30 rounded-2xl flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+                        <div class="w-16 h-16 rounded-full bg-amber-500/20 border border-amber-400 text-amber-300 flex items-center justify-center text-2xl mb-3 cursor-pointer hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-play ml-1"></i>
+                        </div>
+                        <span class="text-sm text-slate-300 font-medium">Короткий уривок розбору (3 хвилини)</span>
+                        <span class="text-xs text-slate-500 mt-1">Демонстрація форми проведення Zoom-зустрічі</span>
+                    </div>
+                </div>
+
+                <!-- ПРИМІТКА ПРО КОНФІДЕНЦІЙНІСТЬ -->
+                <div class="bg-amber-500/5 border border-amber-400/30 rounded-2xl p-5 text-xs sm:text-sm text-slate-300 leading-relaxed flex items-start gap-4">
+                    <span class="text-2xl text-amber-400 shrink-0 mt-0.5">🔒</span>
+                    <p>
+                        <strong class="text-amber-300 font-semibold block mb-0.5">Політика конфіденційності:</strong>
+                        Особисті дані клієнтів, деталі народження та зміст консультацій <strong>ніколи не розголошуються</strong> і не публікуються у відкритому доступі. Усі приклади матеріалів та відеофрагменти вище розміщені <strong>виключно за особистою письмовою згодою клієнта</strong> із вилученням персональної інформації.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- БЛОК "ЧАСТІ ЗАПИТАННЯ" (ПЕРЕНЕСЕНО В САМИЙ НИЗ) -->
+    <section class="py-16 relative z-10 bg-[#07060F]/60 border-t border-amber-500/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-400/20 inline-block mb-3">
+                    Відповіді на питання
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white">Часті запитання (FAQ)</h2>
+                <p class="text-slate-400 text-sm mt-2 font-light">Усе, що важливо знати перед замовленням консультації</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="group bg-astro-card border border-amber-500/20 rounded-2xl p-5 transition-all [&[open]]:border-amber-400/50 [&[open]]:bg-[#181530]">
+                    <summary class="font-semibold text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+                        <span>Скільки чекати готовий розбір?</span>
+                        <span class="text-amber-400 group-open:rotate-180 transition-transform text-sm shrink-0">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-300 mt-4 font-light leading-relaxed border-t border-slate-800 pt-4">
+                        Зазвичай підготовка займає від 3 до 7 робочих днів залежно від завантаженості та складності обраної послуги.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="group bg-astro-card border border-amber-500/20 rounded-2xl p-5 transition-all [&[open]]:border-amber-400/50 [&[open]]:bg-[#181530]">
+                    <summary class="font-semibold text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+                        <span>Що робити, якщо я не знаю точного часу народження?</span>
+                        <span class="text-amber-400 group-open:rotate-180 transition-transform text-sm shrink-0">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-300 mt-4 font-light leading-relaxed border-t border-slate-800 pt-4">
+                        Ми можемо провести ректифікацію (відновлення точного часу за важливими подіями з вашого життя) або розберемо космограму, яка дає до 70% точної інформації про ваш характер, потенціал та кар'єрний вектор.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="group bg-astro-card border border-amber-500/20 rounded-2xl p-5 transition-all [&[open]]:border-amber-400/50 [&[open]]:bg-[#181530]">
+                    <summary class="font-semibold text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+                        <span>Як проходить Zoom-зустріч?</span>
+                        <span class="text-amber-400 group-open:rotate-180 transition-transform text-sm shrink-0">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-300 mt-4 font-light leading-relaxed border-t border-slate-800 pt-4">
+                        Ми збираємося у заздалегідь узгоджений зручний для вас час. Я демонструю вашу карту на екрані, детально пояснюю кожен аспект і відповідаю на всі питання. Повний відеозапис зустрічі залишається у вас назавжди.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 4 -->
+                <details class="group bg-astro-card border border-amber-500/20 rounded-2xl p-5 transition-all [&[open]]:border-amber-400/50 [&[open]]:bg-[#181530]">
+                    <summary class="font-semibold text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+                        <span>Чи можна поставити питання після розбору?</span>
+                        <span class="text-amber-400 group-open:rotate-180 transition-transform text-sm shrink-0">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-300 mt-4 font-light leading-relaxed border-t border-slate-800 pt-4">
+                        Так, абсолютно! Протягом 7 днів після консультації я залишаюся на зв'язку в особистому чаті для будь-яких уточнень щодо прослуханого чи прочитаного матеріалу.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 5 -->
+                <details class="group bg-astro-card border border-amber-500/20 rounded-2xl p-5 transition-all [&[open]]:border-amber-400/50 [&[open]]:bg-[#181530]">
+                    <summary class="font-semibold text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+                        <span>Чи потрібно мені якось готуватися?</span>
+                        <span class="text-amber-400 group-open:rotate-180 transition-transform text-sm shrink-0">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-300 mt-4 font-light leading-relaxed border-t border-slate-800 pt-4">
+                        Спеціальної підготовки не потрібно. Достатньо записати 2–5 найважливіших запитань, які вас хвилюють зараз, та заздалегідь забезпечити собі тихе місце для розмови.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 6 -->
+                <details class="group bg-astro-card border border-amber-500/20 rounded-2xl p-5 transition-all [&[open]]:border-amber-400/50 [&[open]]:bg-[#181530]">
+                    <summary class="font-semibold text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+                        <span>Чи буде фаталізм або "страшні" прогнози?</span>
+                        <span class="text-amber-400 group-open:rotate-180 transition-transform text-sm shrink-0">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-300 mt-4 font-light leading-relaxed border-t border-slate-800 pt-4">
+                        Категорично ні. Моя астрологія — це інструмент психологічної підтримки та самопізнання. Ми розглядаємо ризики як точки росту, а не вирок.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 7 -->
+                <details class="group bg-astro-card border border-amber-500/20 rounded-2xl p-5 transition-all [&[open]]:border-amber-400/50 [&[open]]:bg-[#181530]">
+                    <summary class="font-semibold text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+                        <span>Які є способи оплати?</span>
+                        <span class="text-amber-400 group-open:rotate-180 transition-transform text-sm shrink-0">▼</span>
+                    </summary>
+                    <p class="text-sm text-slate-300 mt-4 font-light leading-relaxed border-t border-slate-800 pt-4">
+                        Оплата здійснюється на картку українського банку або за допомогою міжнародних систем переказу перед початком підготовки матеріалів.
+                    </p>
+                </details>
+            </div>
+
+            <!-- Заклик до дії в кінці FAQ -->
+            <div class="mt-12 text-center bg-astro-card border border-amber-500/20 rounded-3xl p-8 shadow-xl">
+                <h3 class="text-xl font-bold text-white mb-2">Залишилися питання або готові записатися?</h3>
+                <p class="text-slate-400 text-sm font-light mb-6">Оберіть зручний формат зв'язку і ми обговоримо всі деталі</p>
+                <a href="index.html#booking" class="gold-btn px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider inline-block">
+                    Записатися на консультацію
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#07060F] border-t border-amber-500/10 py-12 text-slate-400 text-xs relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="text-amber-300 text-lg">✨</span>
+                <span class="font-heading text-white font-bold text-sm">Олена Мельник</span>
+            </div>
+
+            <p>© 2026 Олена Мельник. Усі права захищено.</p>
+
+            <div class="flex items-center gap-4 text-base text-amber-300">
+                <a href="#" class="hover:text-amber-100 transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="hover:text-amber-100 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-amber-100 transition-colors"><i class="fa-brands fa-viber"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
