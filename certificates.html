@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Подарункові Сертифікати — Астролог Олена Мельник</title>
+    <title>Подарункові Сертифікати — Астролог Олена Мазур</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -77,6 +77,10 @@
             border: 1px solid rgba(229, 193, 88, 0.3);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
+
+        .bg-astro-card {
+            background: linear-gradient(135deg, #1D193B 0%, #151328 100%);
+        }
     </style>
 </head>
 <body class="font-sans antialiased stars-bg flex flex-col min-h-screen">
@@ -90,7 +94,7 @@
                     ✨
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-heading font-bold text-lg text-amber-200 tracking-wider">Олена Мельник</span>
+                    <span class="font-heading font-bold text-lg text-amber-200 tracking-wider">Олена Мазур</span>
                     <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400">Професійний Астролог</span>
                 </div>
             </a>
@@ -100,8 +104,6 @@
                 <a href="index.html#about" class="hover:text-amber-300 transition-colors">Про мене</a>
                 <a href="index.html#services" class="hover:text-amber-300 transition-colors">Астропослуги</a>
                 <a href="index.html#quiz" class="hover:text-amber-300 transition-colors">Підбір послуги</a>
-                <a href="index.html#examples" class="hover:text-amber-300 transition-colors">Приклади</a>
-                <a href="index.html#faq" class="hover:text-amber-300 transition-colors">FAQ</a>
                 <a href="certificates.html" class="text-amber-300 font-semibold border-b border-amber-400/50 pb-0.5">🎁 Сертифікати</a>
             </nav>
 
@@ -126,7 +128,7 @@
         </div>
     </section>
 
-    <!-- МАКЕТИ СЕРТИФІКАТІВ (ВІЗУАЛІЗАЦІЯ) -->
+    <!-- МАКЕТИ СЕРТИФІКАТІВ -->
     <section class="py-10 relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -198,7 +200,8 @@
                     <p class="text-slate-400 text-xs">Заповніть дані, і я підготую сертифікат у найкоротший термін.</p>
                 </div>
 
-                <form onsubmit="handleCertSubmit(event)" class="space-y-4">
+                <!-- Форма замовлення -->
+                <form id="certForm" onsubmit="handleCertSubmit(event)" class="space-y-4">
                     <div>
                         <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Ваше Ім'я (Дарувальник)</label>
                         <input type="text" required placeholder="Марія" class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm">
@@ -245,6 +248,22 @@
                     </button>
                 </form>
 
+                <!-- Блок успішної відправки (прихований за замовчуванням) -->
+                <div id="certSuccessMessage" class="hidden text-center space-y-6 py-8">
+                    <div class="w-16 h-16 bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 rounded-full flex items-center justify-center text-3xl mx-auto">
+                        ✓
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-white">Заявку успішно відправлено!</h3>
+                    <p class="text-slate-300 text-sm max-w-md mx-auto font-light leading-relaxed">
+                        Дякуємо за замовлення сертифіката! Астролог Олена Мазур отримала ваші дані та зв'яжеться з вами найближчим часом для уточнення деталей та оформлення.
+                    </p>
+                    <div class="pt-4">
+                        <a href="index.html" class="gold-btn px-8 py-3 rounded-xl font-bold text-xs uppercase tracking-wider inline-block">
+                            Повернутися на головну
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -254,7 +273,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             
             <div class="flex items-center gap-3">
-                <span class="font-heading font-bold text-amber-200 text-sm">Олена Мельник</span>
+                <span class="font-heading font-bold text-amber-200 text-sm">Олена Мазур</span>
                 <span>© 2026 Всі права захищені.</span>
             </div>
 
@@ -286,8 +305,9 @@
 
         function handleCertSubmit(event) {
             event.preventDefault();
-            alert("Дякуємо за замовлення сертифіката! Олена Мельник зв'яжеться з вами найближчим часом для узгодження деталей.");
-            event.target.reset();
+            // Ховаємо форму та показуємо блок успішної відправки
+            document.getElementById('certForm').classList.add('hidden');
+            document.getElementById('certSuccessMessage').classList.remove('hidden');
         }
     </script>
 </body>

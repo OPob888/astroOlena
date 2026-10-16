@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запис на консультацію — Астролог Олена Мазур</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cinzel Decorative & Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['"Cinzel Decorative"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        astro: {
+                            bg: '#0B0A16',
+                            card: '#151328',
+                            gold: '#E5C158',
+                            goldLight: '#F3E198',
+                            purple: '#6D28D9',
+                            pink: '#D946EF'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B0A16;
+            color: #E2E8F0;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E198 0%, #E5C158 50%, #A37C20 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #E5C158 0%, #C59A30 100%);
+            color: #0B0A16;
+            transition: all 0.3s ease;
+        }
+        .gold-btn:hover {
+            box-shadow: 0 0 25px rgba(229, 193, 88, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .stars-bg {
+            background-image: 
+                radial-gradient(1.5px 1.5px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #E5C158, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #D946EF, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+
+        .bg-astro-card {
+            background: linear-gradient(135deg, #1D193B 0%, #151328 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased stars-bg flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-[#0B0A16]/80 backdrop-blur-md border-b border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-amber-400/40 flex items-center justify-center text-amber-300 text-lg group-hover:border-amber-400 transition-colors">
+                    ✨
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-lg text-amber-200 tracking-wider">Олена Мазур</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400">Професійний Астролог</span>
+                </div>
+            </a>
+
+            <a href="index.html" class="text-xs text-amber-200 hover:text-white uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left text-[10px]"></i> На головну
+            </a>
+        </div>
+    </header>
+
+    <!-- FORM SECTION -->
+    <section class="py-16 flex-grow flex items-center justify-center relative">
+        <div class="max-w-2xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-astro-card border border-amber-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl relative">
+                
+                <div class="text-center space-y-2 mb-8">
+                    <span class="text-3xl">✨</span>
+                    <h1 class="font-heading text-2xl sm:text-3xl font-bold text-white">Запис на консультацію</h1>
+                    <p class="text-slate-400 text-xs sm:text-sm">Заповніть анкету, і я зв'яжуся з вами найближчим часом для підтвердження</p>
+                </div>
+
+                <!-- Форма -->
+                <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4">
+                    
+                    <!-- Ім'я та прізвище -->
+                    <div>
+                        <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Ім'я та Прізвище</label>
+                        <input type="text" required placeholder="Наприклад: Анна Коваль" class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                    </div>
+
+                    <!-- Телефон / Telegram та Послуга -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Телефон / Telegram</label>
+                            <input type="text" required placeholder="+380..." class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Обрана послуга</label>
+                            <select class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                                <option>Натальна Карта (2 500 ₴)</option>
+                                <option>Соляр / Прогноз на рік (3 000 ₴)</option>
+                                <option>Синастрія / Сумісність (2 800 ₴)</option>
+                                <option>Фінанси та Кар'єра (2 200 ₴)</option>
+                                <option>Дитячий Гороскоп (2 000 ₴)</option>
+                                <option>Експрес-Запитання (1 200 ₴)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Дані народження в окремих полях: Дата, Час, Місце -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                        <div>
+                            <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Дата народження</label>
+                            <input type="text" required placeholder="ДД.ММ.РРРР" class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Час народження</label>
+                            <input type="text" placeholder="Напр: 14:30 (не знаю)" class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Місце народження</label>
+                            <input type="text" required placeholder="Країна, місто" class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <!-- Додаткові коментарі -->
+                    <div class="pt-2">
+                        <label class="block text-xs font-bold text-amber-200 uppercase tracking-wider mb-2">Додаткові коментарі чи запитання</label>
+                        <textarea rows="3" placeholder="Розкажіть коротко про те, що турбує найбільше..." class="w-full px-4 py-3 bg-[#0B0A16] border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="gold-btn w-full py-4 rounded-xl font-bold text-sm uppercase tracking-wider shadow-lg mt-4">
+                        Надіслати заявку
+                    </button>
+                </form>
+
+                <!-- Блок успішної відправки (прихований за замовчуванням) -->
+                <div id="successMessage" class="hidden text-center space-y-6 py-8">
+                    <div class="w-16 h-16 bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 rounded-full flex items-center justify-center text-3xl mx-auto">
+                        ✓
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-white">Заявку успішно відправлено!</h3>
+                    <p class="text-slate-300 text-sm max-w-md mx-auto font-light leading-relaxed">
+                        Дякую за довіру! Ваша заявка отримана астрологом. Олена Мазур зв'яжеться з вами найближчим часом у Telegram або за телефоном для узгодження деталей.
+                    </p>
+                    <div class="pt-4">
+                        <a href="index.html" class="gold-btn px-8 py-3 rounded-xl font-bold text-xs uppercase tracking-wider inline-block">
+                            Повернутися на головну
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#070611] border-t border-slate-800 py-8 text-slate-500 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>© 2026 Олена Мазур. Усі права захищено.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT ДЛЯ ОБРОБКИ ФОРМИ -->
+    <script>
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            // Ховаємо форму та показуємо блок успіху
+            document.getElementById('bookingForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
