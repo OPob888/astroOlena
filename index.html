@@ -11,67 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts: Cinzel Decorative & Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        heading: ['"Cinzel Decorative"', 'serif'],
-                        sans: ['Montserrat', 'sans-serif'],
-                    },
-                    colors: {
-                        astro: {
-                            bg: '#0B0A16',
-                            card: '#151328',
-                            gold: '#E5C158',
-                            goldLight: '#F3E198',
-                            purple: '#6D28D9',
-                            pink: '#D946EF'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body {
-            background-color: #0B0A16;
-            color: #E2E8F0;
-        }
-
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #F3E198 0%, #E5C158 50%, #A37C20 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .gold-btn {
-            background: linear-gradient(135deg, #E5C158 0%, #C59A30 100%);
-            color: #0B0A16;
-            transition: all 0.3s ease;
-        }
-        .gold-btn:hover {
-            box-shadow: 0 0 25px rgba(229, 193, 88, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .stars-bg {
-            background-image: 
-                radial-gradient(1.5px 1.5px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 40px 70px, #E5C158, rgba(0,0,0,0)),
-                radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 160px 120px, #D946EF, rgba(0,0,0,0));
-            background-repeat: repeat;
-            background-size: 200px 200px;
-        }
-
-        .bg-astro-card {
-            background: linear-gradient(135deg, #1D193B 0%, #151328 100%);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-sans antialiased stars-bg">
 
@@ -569,34 +509,6 @@
             </div>
         </div>
     </div>
-
-    <!-- JAVASCRIPT -->
-    <script>
-        function openTimeModal() {
-            document.getElementById('timeModal').classList.remove('hidden');
-        }
-
-        function closeTimeModal() {
-            document.getElementById('timeModal').classList.add('hidden');
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('timeModal');
-            if (event.target === modal) {
-                closeTimeModal();
-            }
-        }
-
-        function quizNext(step, choice) {
-            document.getElementById(`quiz-step-${step - 1}`).classList.add('hidden');
-            document.getElementById(`quiz-step-${step}`).classList.remove('hidden');
-        }
-
-        function showQuizResult(recommendation) {
-            document.getElementById('quiz-step-3').classList.add('hidden');
-            document.getElementById('quiz-result').classList.remove('hidden');
-            document.getElementById('quiz-recommendation-title').innerText = recommendation;
-        }
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
