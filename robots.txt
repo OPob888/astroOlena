@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://opob888.github.io/astroOlena/sitemap.xml
